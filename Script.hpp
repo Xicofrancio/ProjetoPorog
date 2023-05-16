@@ -35,6 +35,8 @@ namespace prog
     void rotate_left();
     void rotate_right();
     void median_filter();
+    void open_XPM2();
+    void save_XPM2();
   };
 }
 #endif

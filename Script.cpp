@@ -93,7 +93,14 @@ namespace prog {
                 median_filter();
                 continue;
             }
-
+            if(command == "xpm2_open"){
+                open_XPM2();
+                continue;
+            }
+            if(command == "xpm2_save"){
+                save_XPM2();
+                continue;
+            }
         }
     }
     void Script::open() {
@@ -324,5 +331,20 @@ namespace prog {
     }
 
     delete copy;
+    }
+
+    void Script::open_XPM2() {
+        // Replace current image (if any) with image read from PNG file.
+        clear_image_if_any();
+        string filename;
+        input >> filename;
+        image = loadFromXPM2(filename);
+    }
+
+    void Script::save_XPM2() {
+        // Save current image to PNG file.
+        string filename;
+        input >> filename;
+        saveToXPM2(filename, image);
     }
 }
