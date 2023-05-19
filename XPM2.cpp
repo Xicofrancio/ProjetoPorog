@@ -92,7 +92,7 @@ namespace prog
                     }
                 }
 
-                // If the color is new, add it to the list
+                
                 if (!colorFound)
                 {
                     colors[nColors] = pixColor;
@@ -106,14 +106,14 @@ namespace prog
             output << "\n";
         }
 
-        // Write the colors section
+       
         for (int i = 0; i < nColors; ++i)
         {
             const Color &color = colors[i];
             const std::string &code = colorCodes[i];
-            output << code << " c #" << std::hex << std::setfill('0') << std::setw(2)
-                       << static_cast<int>(color.red()) << std::setw(2)
-                       << static_cast<int>(color.green()) << std::setw(2)
+            output << code << " c #" << hex << setfill('0') << setw(2)
+                       << static_cast<int>(color.red()) << setw(2)
+                       << static_cast<int>(color.green()) << setw(2)
                        << static_cast<int>(color.blue()) << "\n";
         }
 
