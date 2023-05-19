@@ -3,7 +3,6 @@
 #include <iostream>
 #include <fstream>
 #include <sstream>
-#include <map>
 #include <iomanip>
 
 using namespace std;
@@ -19,17 +18,14 @@ namespace prog
         }
 
         string line;
-        getline(input, line); // Skip the header line
+        getline(input, line); // ignore the header line
 
-        // Read image dimensions
         int width, height;
         input >> width >> height;
 
-        // Skip the number of colors and characters per pixel
-        getline(input, line); // Read the rest of the line
-        getline(input, line); // Skip the colors line
+        getline(input, line);
+        getline(input, line);
 
-        // Read the colors
         std::vector<Color> colors;
         while (getline(input, line))
         {
@@ -72,43 +68,53 @@ namespace prog
         }
 
         int nColors = 0;
-        map<Color, string> colorMap;
+        Color colors[256];
+        string colorCodes[256];
+
+        output << "! XPM2\n";
+        output << image->width() << " " << image->height() << " " << nColors << " 1\n";
 
         for (int i = 0; i < image->height(); i++)
         {
-            for (int j = 0; i < image->width(); j++)
+            for (int j = 0; j < image->width(); j++)
             {
                 const Color &pixColor = image->at(j, i);
-                if (colorMap.find(pixColor) == colorMap.end())
+                string code;
+                bool colorFound = false;
+
+                for (int k = 0; k < nColors; k++)
                 {
-                    colorMap[pixColor] = "c" + to_string(nColors);
+                    if (pixColor == colors[i])
+                    {
+                        code = colorCodes[i];
+                        colorFound = true;
+                        break;
+                    }
+                }
+
+                // If the color is new, add it to the list
+                if (!colorFound)
+                {
+                    colors[nColors] = pixColor;
+                    code = "c" + to_string(nColors);
+                    colorCodes[nColors] = code;
                     nColors++;
                 }
-            }
-        }
 
-        output << "! XPM2\n";
-        output << image->width() << " " << image->height() << " " << nColors << " 1/n";
-
-        for (const auto &c : colorMap)
-        {
-            const Color &color = c.first;
-            const string &code = c.second;
-            output << code << " c #" << hex << setfill('0') << setw(2)
-                   << static_cast<int>(color.red()) << setw(2)
-                   << static_cast<int>(color.green()) << setw(2)
-                   << static_cast<int>(color.blue()) << "\n";
-        }
-
-        for (int i = 0; i < image->height(); ++i)
-        {
-            for (int j = 0; j < image->width(); ++j)
-            {
-                const Color &pixelColor = image->at(j, i);
-                const string &code = colorMap[pixelColor];
                 output << code.substr(1);
             }
             output << "\n";
+        }
+
+        // Write the colors section
+        for (int i = 0; i < nColors; ++i)
+        {
+            const Color &color = colors[i];
+            const std::string &code = colorCodes[i];
+            output << code << " c #" << std::hex << std::setfill('0') << std::setw(2)
+                       << static_cast<int>(color.red()) << std::setw(2)
+                       << static_cast<int>(color.green()) << std::setw(2)
+                       << static_cast<int>(color.blue()) << "\n";
         }
 
         output.close();
