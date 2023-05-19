@@ -406,18 +406,23 @@ namespace prog
 
     void Script::open_XPM2()
     {
-        // Replace current image (if any) with image read from PNG file.
-        clear_image_if_any();
         string filename;
         input >> filename;
+        if (image)
+        {
+            delete image;
+        }
         image = loadFromXPM2(filename);
     }
 
     void Script::save_XPM2()
     {
-        // Save current image to PNG file.
         string filename;
         input >> filename;
+        if (!image)
+        {
+            return;
+        }
         saveToXPM2(filename, image);
     }
 }
