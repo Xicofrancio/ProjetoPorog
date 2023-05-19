@@ -336,3 +336,4 @@ namespace prog {
     image = copy;
     }
 }
+
