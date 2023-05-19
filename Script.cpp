@@ -234,8 +234,8 @@ namespace prog {
         input >> x >> y >> w >> h;
         Image* new_image = new Image(w, h);
 
-        for (int i = 0; i < h-y; ++i) {
-            for (int j = 0; j < w-x; ++j) {
+        for (int i = 0; i < h; ++i) {
+            for (int j = 0; j < w; ++j) {
                 Color& c = image->at(x + j, y + i);
                 new_image->at(j, i) = c;
             }
@@ -310,7 +310,7 @@ namespace prog {
                 for (int i = nx_min; i <= nx_max; i++) {
                     // Get pixel values within the image boundaries.
                     if (i >= 0 && i < copy->width() && j >= 0 && j < copy->height()) {
-                        Color c = copy->at(i, j);
+                        Color c = image->at(i, j);
                         r_values.push_back(c.red());
                         g_values.push_back(c.green());
                         b_values.push_back(c.blue());
@@ -322,17 +322,33 @@ namespace prog {
             sort(r_values.begin(), r_values.end());
             sort(g_values.begin(), g_values.end());
             sort(b_values.begin(), b_values.end());
-            int median_r = r_values[r_values.size() / 2];
-            int median_g = g_values[g_values.size() / 2];
-            int median_b = b_values[b_values.size() / 2];
+            int median_r;
+            int median_g;
+            int median_b;
+            if(r_values.size()%2==0){
+               median_r = (r_values[r_values.size() / 2] + r_values[(r_values.size() / 2)-1])/2; 
+            }
+            else{
+                median_r = r_values[r_values.size() / 2];
+            }
+            if(g_values.size()%2==0){
+                median_g = (g_values[g_values.size() / 2] + g_values[(g_values.size() / 2)-1])/2; 
+            }
+            else{
+                median_g = g_values[g_values.size() / 2];
+            }
+            if(b_values.size()%2==0){
+               median_b = (b_values[b_values.size() / 2] + b_values[(b_values.size() / 2)-1])/2; 
+            }
+            else{
+                median_b = b_values[b_values.size() / 2];
+            }  
 
             // Set the median pixel value to the current pixel.
             Color median_color(median_r, median_g, median_b);
             copy->at(x, y) = median_color;
         }
     }
-
-    delete image;
     image = copy;
     }
 }
