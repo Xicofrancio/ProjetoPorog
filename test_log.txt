@@ -199,18 +199,18 @@ Images differ at pixel (1, 0)
 255 245 211 vs 255 244 210
 
 =================================================================
-==4312==ERROR: LeakSanitizer: detected memory leaks
+==4890==ERROR: LeakSanitizer: detected memory leaks
 
 Direct leak of 16 byte(s) in 1 object(s) allocated from:
-    #0 0x7f78bfb271c7 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:99
-    #1 0x556dd543c245 in prog::loadFromPNG(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) /home/alex/shared/ProjetoPorog/PNG.cpp:20
-    #2 0x556dd53e78b6 in prog::Script::open() /home/alex/shared/ProjetoPorog/Script.cpp:104
-    #3 0x556dd53e6a07 in prog::Script::run() /home/alex/shared/ProjetoPorog/Script.cpp:40
-    #4 0x556dd53d72db in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/alex/shared/ProjetoPorog/test+0x882db)
-    #5 0x556dd53d80dd in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/alex/shared/ProjetoPorog/test+0x890dd)
-    #6 0x556dd53d9f53 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/alex/shared/ProjetoPorog/test+0x8af53)
-    #7 0x556dd53d63a0 in main /home/alex/shared/ProjetoPorog/test.cpp:186
-    #8 0x7f78bef0cd8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #0 0x7f226d9b41c7 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:99
+    #1 0x56381e67cadb in prog::loadFromPNG(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) /home/alex/shared/ProjetoPorog/PNG.cpp:20
+    #2 0x56381e627b76 in prog::Script::open() /home/alex/shared/ProjetoPorog/Script.cpp:104
+    #3 0x56381e626cc7 in prog::Script::run() /home/alex/shared/ProjetoPorog/Script.cpp:40
+    #4 0x56381e61759b in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/alex/shared/ProjetoPorog/test+0x9559b)
+    #5 0x56381e61839d in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/alex/shared/ProjetoPorog/test+0x9639d)
+    #6 0x56381e61a213 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/alex/shared/ProjetoPorog/test+0x98213)
+    #7 0x56381e616660 in main /home/alex/shared/ProjetoPorog/test.cpp:186
+    #8 0x7f226cd99d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
 
 SUMMARY: AddressSanitizer: 16 byte(s) leaked in 1 allocation(s).
 >>>> [34] median_filter2 <<<<
@@ -221,18 +221,18 @@ Images differ at pixel (5, 0)
 185 133 116 vs 182 133 115
 
 =================================================================
-==4314==ERROR: LeakSanitizer: detected memory leaks
+==4892==ERROR: LeakSanitizer: detected memory leaks
 
 Direct leak of 16 byte(s) in 1 object(s) allocated from:
-    #0 0x7f78bfb271c7 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:99
-    #1 0x556dd543c245 in prog::loadFromPNG(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) /home/alex/shared/ProjetoPorog/PNG.cpp:20
-    #2 0x556dd53e78b6 in prog::Script::open() /home/alex/shared/ProjetoPorog/Script.cpp:104
-    #3 0x556dd53e6a07 in prog::Script::run() /home/alex/shared/ProjetoPorog/Script.cpp:40
-    #4 0x556dd53d72db in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/alex/shared/ProjetoPorog/test+0x882db)
-    #5 0x556dd53d80dd in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/alex/shared/ProjetoPorog/test+0x890dd)
-    #6 0x556dd53d9f53 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/alex/shared/ProjetoPorog/test+0x8af53)
-    #7 0x556dd53d63a0 in main /home/alex/shared/ProjetoPorog/test.cpp:186
-    #8 0x7f78bef0cd8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #0 0x7f226d9b41c7 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:99
+    #1 0x56381e67cadb in prog::loadFromPNG(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) /home/alex/shared/ProjetoPorog/PNG.cpp:20
+    #2 0x56381e627b76 in prog::Script::open() /home/alex/shared/ProjetoPorog/Script.cpp:104
+    #3 0x56381e626cc7 in prog::Script::run() /home/alex/shared/ProjetoPorog/Script.cpp:40
+    #4 0x56381e61759b in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/alex/shared/ProjetoPorog/test+0x9559b)
+    #5 0x56381e61839d in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/alex/shared/ProjetoPorog/test+0x9639d)
+    #6 0x56381e61a213 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/alex/shared/ProjetoPorog/test+0x98213)
+    #7 0x56381e616660 in main /home/alex/shared/ProjetoPorog/test.cpp:186
+    #8 0x7f226cd99d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
 
 SUMMARY: AddressSanitizer: 16 byte(s) leaked in 1 allocation(s).
 >>>> [35] median_filter3 <<<<
@@ -244,28 +244,28 @@ Images differ at pixel (2, 0)
 46 67 85 vs 46 66 84
 
 =================================================================
-==4316==ERROR: LeakSanitizer: detected memory leaks
+==4895==ERROR: LeakSanitizer: detected memory leaks
 
 Direct leak of 16 byte(s) in 1 object(s) allocated from:
-    #0 0x7f78bfb271c7 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:99
-    #1 0x556dd53ee01c in prog::Script::median_filter() /home/alex/shared/ProjetoPorog/Script.cpp:290
-    #2 0x556dd53e6ebd in prog::Script::run() /home/alex/shared/ProjetoPorog/Script.cpp:93
-    #3 0x556dd53d72db in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/alex/shared/ProjetoPorog/test+0x882db)
-    #4 0x556dd53d80dd in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/alex/shared/ProjetoPorog/test+0x890dd)
-    #5 0x556dd53d9f53 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/alex/shared/ProjetoPorog/test+0x8af53)
-    #6 0x556dd53d63a0 in main /home/alex/shared/ProjetoPorog/test.cpp:186
-    #7 0x7f78bef0cd8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #0 0x7f226d9b41c7 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:99
+    #1 0x56381e62e2dc in prog::Script::median_filter() /home/alex/shared/ProjetoPorog/Script.cpp:290
+    #2 0x56381e62717d in prog::Script::run() /home/alex/shared/ProjetoPorog/Script.cpp:93
+    #3 0x56381e61759b in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/alex/shared/ProjetoPorog/test+0x9559b)
+    #4 0x56381e61839d in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/alex/shared/ProjetoPorog/test+0x9639d)
+    #5 0x56381e61a213 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/alex/shared/ProjetoPorog/test+0x98213)
+    #6 0x56381e616660 in main /home/alex/shared/ProjetoPorog/test.cpp:186
+    #7 0x7f226cd99d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
 
 Direct leak of 16 byte(s) in 1 object(s) allocated from:
-    #0 0x7f78bfb271c7 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:99
-    #1 0x556dd543c245 in prog::loadFromPNG(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) /home/alex/shared/ProjetoPorog/PNG.cpp:20
-    #2 0x556dd53e78b6 in prog::Script::open() /home/alex/shared/ProjetoPorog/Script.cpp:104
-    #3 0x556dd53e6a07 in prog::Script::run() /home/alex/shared/ProjetoPorog/Script.cpp:40
-    #4 0x556dd53d72db in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/alex/shared/ProjetoPorog/test+0x882db)
-    #5 0x556dd53d80dd in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/alex/shared/ProjetoPorog/test+0x890dd)
-    #6 0x556dd53d9f53 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/alex/shared/ProjetoPorog/test+0x8af53)
-    #7 0x556dd53d63a0 in main /home/alex/shared/ProjetoPorog/test.cpp:186
-    #8 0x7f78bef0cd8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #0 0x7f226d9b41c7 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:99
+    #1 0x56381e67cadb in prog::loadFromPNG(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) /home/alex/shared/ProjetoPorog/PNG.cpp:20
+    #2 0x56381e627b76 in prog::Script::open() /home/alex/shared/ProjetoPorog/Script.cpp:104
+    #3 0x56381e626cc7 in prog::Script::run() /home/alex/shared/ProjetoPorog/Script.cpp:40
+    #4 0x56381e61759b in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/alex/shared/ProjetoPorog/test+0x9559b)
+    #5 0x56381e61839d in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/alex/shared/ProjetoPorog/test+0x9639d)
+    #6 0x56381e61a213 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/alex/shared/ProjetoPorog/test+0x98213)
+    #7 0x56381e616660 in main /home/alex/shared/ProjetoPorog/test.cpp:186
+    #8 0x7f226cd99d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
 
 SUMMARY: AddressSanitizer: 32 byte(s) leaked in 2 allocation(s).
 >>>> [36] median_filter4 <<<<
@@ -277,28 +277,28 @@ Images differ at pixel (0, 0)
 128 128 128 vs 145 145 145
 
 =================================================================
-==4318==ERROR: LeakSanitizer: detected memory leaks
+==4897==ERROR: LeakSanitizer: detected memory leaks
 
 Direct leak of 16 byte(s) in 1 object(s) allocated from:
-    #0 0x7f78bfb271c7 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:99
-    #1 0x556dd53ee01c in prog::Script::median_filter() /home/alex/shared/ProjetoPorog/Script.cpp:290
-    #2 0x556dd53e6ebd in prog::Script::run() /home/alex/shared/ProjetoPorog/Script.cpp:93
-    #3 0x556dd53d72db in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/alex/shared/ProjetoPorog/test+0x882db)
-    #4 0x556dd53d80dd in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/alex/shared/ProjetoPorog/test+0x890dd)
-    #5 0x556dd53d9f53 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/alex/shared/ProjetoPorog/test+0x8af53)
-    #6 0x556dd53d63a0 in main /home/alex/shared/ProjetoPorog/test.cpp:186
-    #7 0x7f78bef0cd8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #0 0x7f226d9b41c7 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:99
+    #1 0x56381e62e2dc in prog::Script::median_filter() /home/alex/shared/ProjetoPorog/Script.cpp:290
+    #2 0x56381e62717d in prog::Script::run() /home/alex/shared/ProjetoPorog/Script.cpp:93
+    #3 0x56381e61759b in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/alex/shared/ProjetoPorog/test+0x9559b)
+    #4 0x56381e61839d in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/alex/shared/ProjetoPorog/test+0x9639d)
+    #5 0x56381e61a213 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/alex/shared/ProjetoPorog/test+0x98213)
+    #6 0x56381e616660 in main /home/alex/shared/ProjetoPorog/test.cpp:186
+    #7 0x7f226cd99d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
 
 Direct leak of 16 byte(s) in 1 object(s) allocated from:
-    #0 0x7f78bfb271c7 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:99
-    #1 0x556dd543c245 in prog::loadFromPNG(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) /home/alex/shared/ProjetoPorog/PNG.cpp:20
-    #2 0x556dd53e78b6 in prog::Script::open() /home/alex/shared/ProjetoPorog/Script.cpp:104
-    #3 0x556dd53e6a07 in prog::Script::run() /home/alex/shared/ProjetoPorog/Script.cpp:40
-    #4 0x556dd53d72db in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/alex/shared/ProjetoPorog/test+0x882db)
-    #5 0x556dd53d80dd in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/alex/shared/ProjetoPorog/test+0x890dd)
-    #6 0x556dd53d9f53 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/alex/shared/ProjetoPorog/test+0x8af53)
-    #7 0x556dd53d63a0 in main /home/alex/shared/ProjetoPorog/test.cpp:186
-    #8 0x7f78bef0cd8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #0 0x7f226d9b41c7 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:99
+    #1 0x56381e67cadb in prog::loadFromPNG(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) /home/alex/shared/ProjetoPorog/PNG.cpp:20
+    #2 0x56381e627b76 in prog::Script::open() /home/alex/shared/ProjetoPorog/Script.cpp:104
+    #3 0x56381e626cc7 in prog::Script::run() /home/alex/shared/ProjetoPorog/Script.cpp:40
+    #4 0x56381e61759b in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/alex/shared/ProjetoPorog/test+0x9559b)
+    #5 0x56381e61839d in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/alex/shared/ProjetoPorog/test+0x9639d)
+    #6 0x56381e61a213 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/alex/shared/ProjetoPorog/test+0x98213)
+    #7 0x56381e616660 in main /home/alex/shared/ProjetoPorog/test.cpp:186
+    #8 0x7f226cd99d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
 
 SUMMARY: AddressSanitizer: 32 byte(s) leaked in 2 allocation(s).
 >>>> [37] median_filter5 <<<<
@@ -312,28 +312,28 @@ Images differ at pixel (493, 0)
 47 60 142 vs 47 60 141
 
 =================================================================
-==4320==ERROR: LeakSanitizer: detected memory leaks
+==4899==ERROR: LeakSanitizer: detected memory leaks
 
 Direct leak of 48 byte(s) in 3 object(s) allocated from:
-    #0 0x7f78bfb271c7 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:99
-    #1 0x556dd53ee01c in prog::Script::median_filter() /home/alex/shared/ProjetoPorog/Script.cpp:290
-    #2 0x556dd53e6ebd in prog::Script::run() /home/alex/shared/ProjetoPorog/Script.cpp:93
-    #3 0x556dd53d72db in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/alex/shared/ProjetoPorog/test+0x882db)
-    #4 0x556dd53d80dd in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/alex/shared/ProjetoPorog/test+0x890dd)
-    #5 0x556dd53d9f53 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/alex/shared/ProjetoPorog/test+0x8af53)
-    #6 0x556dd53d63a0 in main /home/alex/shared/ProjetoPorog/test.cpp:186
-    #7 0x7f78bef0cd8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #0 0x7f226d9b41c7 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:99
+    #1 0x56381e62e2dc in prog::Script::median_filter() /home/alex/shared/ProjetoPorog/Script.cpp:290
+    #2 0x56381e62717d in prog::Script::run() /home/alex/shared/ProjetoPorog/Script.cpp:93
+    #3 0x56381e61759b in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/alex/shared/ProjetoPorog/test+0x9559b)
+    #4 0x56381e61839d in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/alex/shared/ProjetoPorog/test+0x9639d)
+    #5 0x56381e61a213 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/alex/shared/ProjetoPorog/test+0x98213)
+    #6 0x56381e616660 in main /home/alex/shared/ProjetoPorog/test.cpp:186
+    #7 0x7f226cd99d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
 
 Direct leak of 16 byte(s) in 1 object(s) allocated from:
-    #0 0x7f78bfb271c7 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:99
-    #1 0x556dd543c245 in prog::loadFromPNG(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) /home/alex/shared/ProjetoPorog/PNG.cpp:20
-    #2 0x556dd53e78b6 in prog::Script::open() /home/alex/shared/ProjetoPorog/Script.cpp:104
-    #3 0x556dd53e6a07 in prog::Script::run() /home/alex/shared/ProjetoPorog/Script.cpp:40
-    #4 0x556dd53d72db in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/alex/shared/ProjetoPorog/test+0x882db)
-    #5 0x556dd53d80dd in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/alex/shared/ProjetoPorog/test+0x890dd)
-    #6 0x556dd53d9f53 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/alex/shared/ProjetoPorog/test+0x8af53)
-    #7 0x556dd53d63a0 in main /home/alex/shared/ProjetoPorog/test.cpp:186
-    #8 0x7f78bef0cd8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #0 0x7f226d9b41c7 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:99
+    #1 0x56381e67cadb in prog::loadFromPNG(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) /home/alex/shared/ProjetoPorog/PNG.cpp:20
+    #2 0x56381e627b76 in prog::Script::open() /home/alex/shared/ProjetoPorog/Script.cpp:104
+    #3 0x56381e626cc7 in prog::Script::run() /home/alex/shared/ProjetoPorog/Script.cpp:40
+    #4 0x56381e61759b in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/alex/shared/ProjetoPorog/test+0x9559b)
+    #5 0x56381e61839d in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/alex/shared/ProjetoPorog/test+0x9639d)
+    #6 0x56381e61a213 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/alex/shared/ProjetoPorog/test+0x98213)
+    #7 0x56381e616660 in main /home/alex/shared/ProjetoPorog/test.cpp:186
+    #8 0x7f226cd99d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
 
 SUMMARY: AddressSanitizer: 64 byte(s) leaked in 4 allocation(s).
 >>>> [38] replace1 <<<<
@@ -431,24 +431,24 @@ PNG.cpp:31:30: runtime error: member call on null pointer of type 'const struct 
 Image.cpp:34:18: runtime error: member access within null pointer of type 'const struct Image'
 AddressSanitizer:DEADLYSIGNAL
 =================================================================
-==4360==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000004 (pc 0x556dd53e59ff bp 0x7fff51c6c620 sp 0x7fff51c6c610 T0)
-==4360==The signal is caused by a READ memory access.
-==4360==Hint: address points to the zero page.
-    #0 0x556dd53e59ff in prog::Image::height() const /home/alex/shared/ProjetoPorog/Image.cpp:34
-    #1 0x556dd543c89f in prog::saveToPNG(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, prog::Image const*) /home/alex/shared/ProjetoPorog/PNG.cpp:31
-    #2 0x556dd53e807c in prog::Script::save() /home/alex/shared/ProjetoPorog/Script.cpp:118
-    #3 0x556dd53e6ac1 in prog::Script::run() /home/alex/shared/ProjetoPorog/Script.cpp:49
-    #4 0x556dd53d72db in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/alex/shared/ProjetoPorog/test+0x882db)
-    #5 0x556dd53d80dd in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/alex/shared/ProjetoPorog/test+0x890dd)
-    #6 0x556dd53d9f53 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/alex/shared/ProjetoPorog/test+0x8af53)
-    #7 0x556dd53d63a0 in main /home/alex/shared/ProjetoPorog/test.cpp:186
-    #8 0x7f78bef0cd8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
-    #9 0x7f78bef0ce3f in __libc_start_main_impl ../csu/libc-start.c:392
-    #10 0x556dd53d5f34 in _start (/home/alex/shared/ProjetoPorog/test+0x86f34)
+==4939==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000004 (pc 0x56381e625cbf bp 0x7ffc042244b0 sp 0x7ffc042244a0 T0)
+==4939==The signal is caused by a READ memory access.
+==4939==Hint: address points to the zero page.
+    #0 0x56381e625cbf in prog::Image::height() const /home/alex/shared/ProjetoPorog/Image.cpp:34
+    #1 0x56381e67d135 in prog::saveToPNG(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, prog::Image const*) /home/alex/shared/ProjetoPorog/PNG.cpp:31
+    #2 0x56381e62833c in prog::Script::save() /home/alex/shared/ProjetoPorog/Script.cpp:118
+    #3 0x56381e626d81 in prog::Script::run() /home/alex/shared/ProjetoPorog/Script.cpp:49
+    #4 0x56381e61759b in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/alex/shared/ProjetoPorog/test+0x9559b)
+    #5 0x56381e61839d in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/alex/shared/ProjetoPorog/test+0x9639d)
+    #6 0x56381e61a213 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/alex/shared/ProjetoPorog/test+0x98213)
+    #7 0x56381e616660 in main /home/alex/shared/ProjetoPorog/test.cpp:186
+    #8 0x7f226cd99d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #9 0x7f226cd99e3f in __libc_start_main_impl ../csu/libc-start.c:392
+    #10 0x56381e6161f4 in _start (/home/alex/shared/ProjetoPorog/test+0x941f4)
 
 AddressSanitizer can not provide additional info.
 SUMMARY: AddressSanitizer: SEGV /home/alex/shared/ProjetoPorog/Image.cpp:34 in prog::Image::height() const
-==4360==ABORTING
+==4939==ABORTING
 >>>> [58] xpm2_open2 <<<<
 Executing command 'xpm2_open' ...
 Executing command 'input/squares.xpm' ...
@@ -457,24 +457,24 @@ PNG.cpp:31:30: runtime error: member call on null pointer of type 'const struct 
 Image.cpp:34:18: runtime error: member access within null pointer of type 'const struct Image'
 AddressSanitizer:DEADLYSIGNAL
 =================================================================
-==4361==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000004 (pc 0x556dd53e59ff bp 0x7fff51c6c620 sp 0x7fff51c6c610 T0)
-==4361==The signal is caused by a READ memory access.
-==4361==Hint: address points to the zero page.
-    #0 0x556dd53e59ff in prog::Image::height() const /home/alex/shared/ProjetoPorog/Image.cpp:34
-    #1 0x556dd543c89f in prog::saveToPNG(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, prog::Image const*) /home/alex/shared/ProjetoPorog/PNG.cpp:31
-    #2 0x556dd53e807c in prog::Script::save() /home/alex/shared/ProjetoPorog/Script.cpp:118
-    #3 0x556dd53e6ac1 in prog::Script::run() /home/alex/shared/ProjetoPorog/Script.cpp:49
-    #4 0x556dd53d72db in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/alex/shared/ProjetoPorog/test+0x882db)
-    #5 0x556dd53d80dd in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/alex/shared/ProjetoPorog/test+0x890dd)
-    #6 0x556dd53d9f53 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/alex/shared/ProjetoPorog/test+0x8af53)
-    #7 0x556dd53d63a0 in main /home/alex/shared/ProjetoPorog/test.cpp:186
-    #8 0x7f78bef0cd8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
-    #9 0x7f78bef0ce3f in __libc_start_main_impl ../csu/libc-start.c:392
-    #10 0x556dd53d5f34 in _start (/home/alex/shared/ProjetoPorog/test+0x86f34)
+==4940==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000004 (pc 0x56381e625cbf bp 0x7ffc042244b0 sp 0x7ffc042244a0 T0)
+==4940==The signal is caused by a READ memory access.
+==4940==Hint: address points to the zero page.
+    #0 0x56381e625cbf in prog::Image::height() const /home/alex/shared/ProjetoPorog/Image.cpp:34
+    #1 0x56381e67d135 in prog::saveToPNG(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, prog::Image const*) /home/alex/shared/ProjetoPorog/PNG.cpp:31
+    #2 0x56381e62833c in prog::Script::save() /home/alex/shared/ProjetoPorog/Script.cpp:118
+    #3 0x56381e626d81 in prog::Script::run() /home/alex/shared/ProjetoPorog/Script.cpp:49
+    #4 0x56381e61759b in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/alex/shared/ProjetoPorog/test+0x9559b)
+    #5 0x56381e61839d in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/alex/shared/ProjetoPorog/test+0x9639d)
+    #6 0x56381e61a213 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/alex/shared/ProjetoPorog/test+0x98213)
+    #7 0x56381e616660 in main /home/alex/shared/ProjetoPorog/test.cpp:186
+    #8 0x7f226cd99d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #9 0x7f226cd99e3f in __libc_start_main_impl ../csu/libc-start.c:392
+    #10 0x56381e6161f4 in _start (/home/alex/shared/ProjetoPorog/test+0x941f4)
 
 AddressSanitizer can not provide additional info.
 SUMMARY: AddressSanitizer: SEGV /home/alex/shared/ProjetoPorog/Image.cpp:34 in prog::Image::height() const
-==4361==ABORTING
+==4940==ABORTING
 >>>> [59] xpm2_open3 <<<<
 Executing command 'xpm2_open' ...
 Executing command 'input/tetris.xpm' ...
@@ -483,24 +483,24 @@ PNG.cpp:31:30: runtime error: member call on null pointer of type 'const struct 
 Image.cpp:34:18: runtime error: member access within null pointer of type 'const struct Image'
 AddressSanitizer:DEADLYSIGNAL
 =================================================================
-==4362==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000004 (pc 0x556dd53e59ff bp 0x7fff51c6c620 sp 0x7fff51c6c610 T0)
-==4362==The signal is caused by a READ memory access.
-==4362==Hint: address points to the zero page.
-    #0 0x556dd53e59ff in prog::Image::height() const /home/alex/shared/ProjetoPorog/Image.cpp:34
-    #1 0x556dd543c89f in prog::saveToPNG(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, prog::Image const*) /home/alex/shared/ProjetoPorog/PNG.cpp:31
-    #2 0x556dd53e807c in prog::Script::save() /home/alex/shared/ProjetoPorog/Script.cpp:118
-    #3 0x556dd53e6ac1 in prog::Script::run() /home/alex/shared/ProjetoPorog/Script.cpp:49
-    #4 0x556dd53d72db in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/alex/shared/ProjetoPorog/test+0x882db)
-    #5 0x556dd53d80dd in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/alex/shared/ProjetoPorog/test+0x890dd)
-    #6 0x556dd53d9f53 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/alex/shared/ProjetoPorog/test+0x8af53)
-    #7 0x556dd53d63a0 in main /home/alex/shared/ProjetoPorog/test.cpp:186
-    #8 0x7f78bef0cd8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
-    #9 0x7f78bef0ce3f in __libc_start_main_impl ../csu/libc-start.c:392
-    #10 0x556dd53d5f34 in _start (/home/alex/shared/ProjetoPorog/test+0x86f34)
+==4941==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000004 (pc 0x56381e625cbf bp 0x7ffc042244b0 sp 0x7ffc042244a0 T0)
+==4941==The signal is caused by a READ memory access.
+==4941==Hint: address points to the zero page.
+    #0 0x56381e625cbf in prog::Image::height() const /home/alex/shared/ProjetoPorog/Image.cpp:34
+    #1 0x56381e67d135 in prog::saveToPNG(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, prog::Image const*) /home/alex/shared/ProjetoPorog/PNG.cpp:31
+    #2 0x56381e62833c in prog::Script::save() /home/alex/shared/ProjetoPorog/Script.cpp:118
+    #3 0x56381e626d81 in prog::Script::run() /home/alex/shared/ProjetoPorog/Script.cpp:49
+    #4 0x56381e61759b in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/alex/shared/ProjetoPorog/test+0x9559b)
+    #5 0x56381e61839d in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/alex/shared/ProjetoPorog/test+0x9639d)
+    #6 0x56381e61a213 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/alex/shared/ProjetoPorog/test+0x98213)
+    #7 0x56381e616660 in main /home/alex/shared/ProjetoPorog/test.cpp:186
+    #8 0x7f226cd99d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #9 0x7f226cd99e3f in __libc_start_main_impl ../csu/libc-start.c:392
+    #10 0x56381e6161f4 in _start (/home/alex/shared/ProjetoPorog/test+0x941f4)
 
 AddressSanitizer can not provide additional info.
 SUMMARY: AddressSanitizer: SEGV /home/alex/shared/ProjetoPorog/Image.cpp:34 in prog::Image::height() const
-==4362==ABORTING
+==4941==ABORTING
 >>>> [60] xpm2_open4 <<<<
 Executing command 'xpm2_open' ...
 Executing command 'input/mondrian.xpm' ...
@@ -509,24 +509,24 @@ PNG.cpp:31:30: runtime error: member call on null pointer of type 'const struct 
 Image.cpp:34:18: runtime error: member access within null pointer of type 'const struct Image'
 AddressSanitizer:DEADLYSIGNAL
 =================================================================
-==4363==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000004 (pc 0x556dd53e59ff bp 0x7fff51c6c620 sp 0x7fff51c6c610 T0)
-==4363==The signal is caused by a READ memory access.
-==4363==Hint: address points to the zero page.
-    #0 0x556dd53e59ff in prog::Image::height() const /home/alex/shared/ProjetoPorog/Image.cpp:34
-    #1 0x556dd543c89f in prog::saveToPNG(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, prog::Image const*) /home/alex/shared/ProjetoPorog/PNG.cpp:31
-    #2 0x556dd53e807c in prog::Script::save() /home/alex/shared/ProjetoPorog/Script.cpp:118
-    #3 0x556dd53e6ac1 in prog::Script::run() /home/alex/shared/ProjetoPorog/Script.cpp:49
-    #4 0x556dd53d72db in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/alex/shared/ProjetoPorog/test+0x882db)
-    #5 0x556dd53d80dd in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/alex/shared/ProjetoPorog/test+0x890dd)
-    #6 0x556dd53d9f53 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/alex/shared/ProjetoPorog/test+0x8af53)
-    #7 0x556dd53d63a0 in main /home/alex/shared/ProjetoPorog/test.cpp:186
-    #8 0x7f78bef0cd8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
-    #9 0x7f78bef0ce3f in __libc_start_main_impl ../csu/libc-start.c:392
-    #10 0x556dd53d5f34 in _start (/home/alex/shared/ProjetoPorog/test+0x86f34)
+==4942==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000004 (pc 0x56381e625cbf bp 0x7ffc042244b0 sp 0x7ffc042244a0 T0)
+==4942==The signal is caused by a READ memory access.
+==4942==Hint: address points to the zero page.
+    #0 0x56381e625cbf in prog::Image::height() const /home/alex/shared/ProjetoPorog/Image.cpp:34
+    #1 0x56381e67d135 in prog::saveToPNG(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, prog::Image const*) /home/alex/shared/ProjetoPorog/PNG.cpp:31
+    #2 0x56381e62833c in prog::Script::save() /home/alex/shared/ProjetoPorog/Script.cpp:118
+    #3 0x56381e626d81 in prog::Script::run() /home/alex/shared/ProjetoPorog/Script.cpp:49
+    #4 0x56381e61759b in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/alex/shared/ProjetoPorog/test+0x9559b)
+    #5 0x56381e61839d in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/alex/shared/ProjetoPorog/test+0x9639d)
+    #6 0x56381e61a213 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/alex/shared/ProjetoPorog/test+0x98213)
+    #7 0x56381e616660 in main /home/alex/shared/ProjetoPorog/test.cpp:186
+    #8 0x7f226cd99d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #9 0x7f226cd99e3f in __libc_start_main_impl ../csu/libc-start.c:392
+    #10 0x56381e6161f4 in _start (/home/alex/shared/ProjetoPorog/test+0x941f4)
 
 AddressSanitizer can not provide additional info.
 SUMMARY: AddressSanitizer: SEGV /home/alex/shared/ProjetoPorog/Image.cpp:34 in prog::Image::height() const
-==4363==ABORTING
+==4942==ABORTING
 >>>> [61] xpm2_open5 <<<<
 Executing command 'xpm2_open' ...
 Executing command 'input/lion.xpm' ...
@@ -535,24 +535,24 @@ PNG.cpp:31:30: runtime error: member call on null pointer of type 'const struct 
 Image.cpp:34:18: runtime error: member access within null pointer of type 'const struct Image'
 AddressSanitizer:DEADLYSIGNAL
 =================================================================
-==4364==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000004 (pc 0x556dd53e59ff bp 0x7fff51c6c620 sp 0x7fff51c6c610 T0)
-==4364==The signal is caused by a READ memory access.
-==4364==Hint: address points to the zero page.
-    #0 0x556dd53e59ff in prog::Image::height() const /home/alex/shared/ProjetoPorog/Image.cpp:34
-    #1 0x556dd543c89f in prog::saveToPNG(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, prog::Image const*) /home/alex/shared/ProjetoPorog/PNG.cpp:31
-    #2 0x556dd53e807c in prog::Script::save() /home/alex/shared/ProjetoPorog/Script.cpp:118
-    #3 0x556dd53e6ac1 in prog::Script::run() /home/alex/shared/ProjetoPorog/Script.cpp:49
-    #4 0x556dd53d72db in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/alex/shared/ProjetoPorog/test+0x882db)
-    #5 0x556dd53d80dd in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/alex/shared/ProjetoPorog/test+0x890dd)
-    #6 0x556dd53d9f53 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/alex/shared/ProjetoPorog/test+0x8af53)
-    #7 0x556dd53d63a0 in main /home/alex/shared/ProjetoPorog/test.cpp:186
-    #8 0x7f78bef0cd8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
-    #9 0x7f78bef0ce3f in __libc_start_main_impl ../csu/libc-start.c:392
-    #10 0x556dd53d5f34 in _start (/home/alex/shared/ProjetoPorog/test+0x86f34)
+==4943==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000004 (pc 0x56381e625cbf bp 0x7ffc042244b0 sp 0x7ffc042244a0 T0)
+==4943==The signal is caused by a READ memory access.
+==4943==Hint: address points to the zero page.
+    #0 0x56381e625cbf in prog::Image::height() const /home/alex/shared/ProjetoPorog/Image.cpp:34
+    #1 0x56381e67d135 in prog::saveToPNG(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, prog::Image const*) /home/alex/shared/ProjetoPorog/PNG.cpp:31
+    #2 0x56381e62833c in prog::Script::save() /home/alex/shared/ProjetoPorog/Script.cpp:118
+    #3 0x56381e626d81 in prog::Script::run() /home/alex/shared/ProjetoPorog/Script.cpp:49
+    #4 0x56381e61759b in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/alex/shared/ProjetoPorog/test+0x9559b)
+    #5 0x56381e61839d in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/alex/shared/ProjetoPorog/test+0x9639d)
+    #6 0x56381e61a213 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/alex/shared/ProjetoPorog/test+0x98213)
+    #7 0x56381e616660 in main /home/alex/shared/ProjetoPorog/test.cpp:186
+    #8 0x7f226cd99d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #9 0x7f226cd99e3f in __libc_start_main_impl ../csu/libc-start.c:392
+    #10 0x56381e6161f4 in _start (/home/alex/shared/ProjetoPorog/test+0x941f4)
 
 AddressSanitizer can not provide additional info.
 SUMMARY: AddressSanitizer: SEGV /home/alex/shared/ProjetoPorog/Image.cpp:34 in prog::Image::height() const
-==4364==ABORTING
+==4943==ABORTING
 >>>> [62] xpm2_save1 <<<<
 Executing command 'open' ...
 Executing command 'xpm2_save' ...
