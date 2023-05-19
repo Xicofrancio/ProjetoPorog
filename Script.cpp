@@ -234,8 +234,8 @@ namespace prog {
         input >> x >> y >> w >> h;
         Image* new_image = new Image(w, h);
 
-        for (int i = 0; i < h; ++i) {
-            for (int j = 0; j < w; ++j) {
+        for (int i = 0; i < h-y; ++i) {
+            for (int j = 0; j < w-x; ++j) {
                 Color& c = image->at(x + j, y + i);
                 new_image->at(j, i) = c;
             }
@@ -254,7 +254,7 @@ namespace prog {
         for (int y = 0; y < h; ++y) {
             for (int x = 0; x < w; ++x) {
                 Color c = image->at(x, y);
-                newImage->at(h - y - 1, x) = c;
+                newImage->at(y, w - x - 1) = c;
         }
         }
 
@@ -267,7 +267,7 @@ namespace prog {
         Image *newImage = new Image(h, w, Color(0, 0, 0));
         for (int y = 0; y < h; ++y) {
             for (int x = 0; x < w; ++x) {
-                newImage->at(y, w - x - 1) = image->at(x, y);
+                newImage->at(h - y - 1, x) = image->at(x, y);
             }   
         }
         delete image;
@@ -288,6 +288,10 @@ namespace prog {
 
     // Create a copy of the original image.
     Image *copy = new Image(*image);
+    int nx_max;
+    int nx_min;
+    int ny_max;
+    int ny_min;
 
     // Apply the median filter to each pixel.
     for (int y = 0; y < copy->height(); y++) {
@@ -296,9 +300,14 @@ namespace prog {
             vector<int> r_values;
             vector<int> g_values;
             vector<int> b_values;
+            
+            nx_max=min(copy->width()-1,x + ws / 2);
+            nx_min=max(0,x - ws / 2);
+            ny_max=min(copy->height()-1,y + ws / 2);
+            ny_min=max(0,y - ws / 2);
 
-            for (int j = y - ws / 2; j <= y + ws / 2; j++) {
-                for (int i = x - ws / 2; i <= x + ws / 2; i++) {
+            for (int j = ny_min; j <= ny_max; j++) {
+                for (int i = nx_min; i <= nx_max; i++) {
                     // Get pixel values within the image boundaries.
                     if (i >= 0 && i < copy->width() && j >= 0 && j < copy->height()) {
                         Color c = copy->at(i, j);
@@ -319,10 +328,11 @@ namespace prog {
 
             // Set the median pixel value to the current pixel.
             Color median_color(median_r, median_g, median_b);
-            image->at(x, y) = median_color;
+            copy->at(x, y) = median_color;
         }
     }
 
-    delete copy;
+    delete image;
+    image = copy;
     }
 }
