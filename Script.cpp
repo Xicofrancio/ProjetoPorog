@@ -351,5 +351,26 @@ namespace prog {
     }
     image = copy;
     }
+    void Script::open_XPM2()
+    {
+        string filename;
+        input >> filename;
+        if (image)
+        {
+            delete image;
+        }
+        image = loadFromXPM2(filename);
+    }
+
+    void Script::save_XPM2()
+    {
+        string filename;
+        input >> filename;
+        if (!image)
+        {
+            return;
+        }
+        saveToXPM2(filename, image);
+    }
 }
 
